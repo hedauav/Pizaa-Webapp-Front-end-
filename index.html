@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SliceMaster Pizzeria - Handcrafted Artisan Pizzas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="SliceMaster Pizza Logo">
+                    <h1>Slice<span>Master</span></h1>
+                </div>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#specials" class="nav-link">Specials</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="nav-button">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-content container">
+        <div class="hero-text">
+            <h2>Crafted with Passion,</h2>
+            <h1>Served with <span>Love</span></h1>
+            <p>Experience authentic Italian flavors with our handcrafted artisan pizzas made from the finest ingredients. Fresh, delicious, and straight from our brick oven to your table.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn primary-btn">View Menu</a>
+                <a href="#" class="btn secondary-btn">Order Online</a>
+            </div>
+        </div>
+        <div class="hero-banner">
+            <img src="images/hero-banner.png" alt="Delicious SliceMaster Pizza" class="hero-img">
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+</section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We source only the freshest, highest quality ingredients for our pizzas.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Hot and fresh pizza delivered to your doorstep within 30 minutes.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Brick Oven Baked</h3>
+                    <p>Traditional brick oven for that perfect crispy yet chewy crust.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Organic Options</h3>
+                    <p>Vegetarian, vegan, and gluten-free options available for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Explore our handcrafted pizza creations</p>
+                <div class="separator"></div>
+            </div>
+
+            <div class="menu-categories">
+                <button class="menu-category active" data-category="popular">Popular</button>
+                <button class="menu-category" data-category="classic">Classics</button>
+                <button class="menu-category" data-category="specialty">Specialty</button>
+                <button class="menu-category" data-category="veg">Vegetarian</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Pizza Item 1 -->
+                <div class="menu-item" data-category="popular specialty">
+                    <div class="menu-item-img">
+                        <img src="images/pizza-1.jpg" alt="Pepperoni Supreme Pizza">
+                        <div class="menu-item-tag">Bestseller</div>
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Pepperoni Supreme</h3>
+                        <p>Premium pepperoni, mozzarella, fresh basil, and our signature tomato sauce</p>
+                        <div class="menu-item-footer">
+                            <span class="price"> ₹199</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 2 -->
+                <div class="menu-item" data-category="classic">
+                    <div class="menu-item-img">
+                        <img src="images/pizza-2.jpg" alt="Margherita Pizza">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Classic Margherita</h3>
+                        <p>Fresh buffalo mozzarella, tomatoes, basil leaves, olive oil, and sea salt</p>
+                        <div class="menu-item-footer">
+                            <span class="price"> ₹189</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 3 -->
+                <div class="menu-item" data-category="specialty">
+                    <div class="menu-item-img">
+                        <img src="images/pizza-3.jpg" alt="BBQ Chicken Pizza">
+                        <div class="menu-item-tag">New</div>
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>BBQ Chicken Deluxe</h3>
+                        <p>Grilled chicken, red onions, bacon, and tangy BBQ sauce with mozzarella</p>
+                        <div class="menu-item-footer">
+                            <span class="price"> ₹189</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 4 -->
+                <div class="menu-item" data-category="veg popular">
+                    <div class="menu-item-img">
+                        <img src="images/pizza-4.jpg" alt="Veggie Supreme Pizza">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Veggie Supreme</h3>
+                        <p>Bell peppers, mushrooms, red onions, black olives, tomatoes, and spinach</p>
+                        <div class="menu-item-footer">
+                            <span class="price"> ₹179</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 5 -->
+                <div class="menu-item" data-category="classic">
+                    <div class="menu-item-img">
+                        <img src="images/pizza-5.jpg" alt="Hawaiian Pizza">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Hawaiian Paradise</h3>
+                        <p>Ham, pineapple chunks, and mozzarella on our homemade tomato sauce</p>
+                        <div class="menu-item-footer">
+                            <span class="price"> ₹159</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 6 -->
+                <div class="menu-item" data-category="specialty popular">
+                    <div class="menu-item-img">
+                        <img src="images/pizza-6.jpg" alt="Meat Lover's Pizza">
+                        <div class="menu-item-tag">Spicy</div>
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Meat Lover's</h3>
+                        <p>Pepperoni, Italian sausage, bacon, ham, and ground beef with extra cheese</p>
+                        <div class="menu-item-footer">
+                            <span class="price"> ₹229</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 7 -->
+                <div class="menu-item" data-category="veg">
+                    <div class="menu-item-img">
+                        <img src="images/pizza-7.jpg" alt="Mediterranean Pizza">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Mediterranean</h3>
+                        <p>Feta cheese, olives, sun-dried tomatoes, artichoke hearts, and spinach</p>
+                        <div class="menu-item-footer">
+                            <span class="price"> ₹179</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="view-full-menu">
+                <a href="#" class="btn primary-btn">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <p>The passion behind our pizzas</p>
+                <div class="separator"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about-pizza.jpg" alt="Chef Making Pizza">
+                    <div class="about-experience">
+                        <span class="years">25+</span>
+                        <span class="text">years of experience</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Traditional Pizza Making Since 2000</h3>
+                    <p>SliceMaster Pizzeria was born from a passion for authentic Italian cuisine and a desire to bring the genuine taste of Naples to your neighborhood. Our founder, Chef Antonio, learned the art of pizza making from his grandfather in southern Italy before bringing his family recipes to the United States.</p>
+                    <p>What started as a small family-owned pizza shop has grown into a beloved local institution, but our commitment to quality has never wavered. We still make our dough fresh daily, source local ingredients whenever possible, and cook in traditional brick ovens.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Hand-kneaded dough</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Locally sourced ingredients</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Traditional recipes</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Brick oven baked</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn primary-btn">Visit Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Deals Section -->
+    <section id="specials" class="specials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Special Deals</h2>
+                <p>Exclusive offers you can't resist</p>
+                <div class="separator"></div>
+            </div>
+
+            <div class="specials-grid">
+                <div class="special-card">
+                    <div class="special-image">
+                        <img src="images/special-1.jpg" alt="Family Combo Deal">
+                    </div>
+                    <div class="special-content">
+                        <h3>Family Combo</h3>
+                        <p>2 large pizzas, garlic bread, and a 2L soda</p>
+                        <div class="special-price">
+                            <span class="old-price"> ₹399</span>
+                            <span class="new-price"> ₹299</span>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="special-card featured">
+                    <div class="special-tag">Best Value</div>
+                    <div class="special-image">
+                        <img src="images/special-2.jpg" alt="Weekend Special">
+                    </div>
+                    <div class="special-content">
+                        <h3>Weekend Special</h3>
+                        <p>Buy any large specialty pizza and get a medium classic pizza free</p>
+                        <div class="special-price">
+                            <span class="new-price">From  ₹199</span>
+                        </div>
+                        <a href="#" class="btn primary-btn">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="special-card">
+                    <div class="special-image">
+                        <img src="images/special-3.jpg" alt="Lunch Deal">
+                    </div>
+                    <div class="special-content">
+                        <h3>Lunch Special</h3>
+                        <p>Personal pizza with one topping and a drink</p>
+                        <div class="special-price">
+                            <span class="old-price"> ₹129</span>
+                            <span class="new-price"> ₹99</span>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <p>What our happy customers say</p>
+                <div class="separator"></div>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"The best pizza I've had in years! The crust is perfectly crisp yet chewy, and the toppings are always fresh. Their delivery is always on time too!"</p>
+                            <div class="testimonial-author">
+                                <img src="images/customer-1.jpg" alt="Sarah Johnson">
+                                <div>
+                                    <h4>Sergio Ramos</h4>
+                                    <span>Regular Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"As an Italian, I'm very picky about my pizza. SliceMaster is the real deal! Their Margherita pizza reminds me of home. Authentic flavors and great service."</p>
+                            <div class="testimonial-author">
+                                <img src="images/customer-2.jpg" alt="Marco Rossi">
+                                <div>
+                                    <h4>Marco Rossi</h4>
+                                    <span>Foodie</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>"My family loves their weekend special deal. The kids are always excited when it's SliceMaster night! Great value and even better taste. Highly recommended."</p>
+                            <div class="testimonial-author">
+                                <img src="images/customer-3.jpg" alt="Jennifer Smith">
+                                <div>
+                                    <h4>Jennifer Smith</h4>
+                                    <span>Family Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls">
+                    <button id="prevButton" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots" id="testimonialDots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button id="nextButton" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/gallery-1.jpg" alt="Pizza Making">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-2.jpg" alt="Brick Oven">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-3.jpg" alt="Fresh Ingredients">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-4.jpg" alt="Restaurant Interior">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-5.jpg" alt="Happy Customers">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visit Us</h2>
+                <p>Find us or contact us</p>
+                <div class="separator"></div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Our Location</h4>
+                            <p>123 Pizza Street, Gittikhadan</p>
+                            <p>Nagput,  440013</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>Order: (555) 123-4567</p>
+                            <p>Reservations: (555) 987-6543</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Opening Hours</h4>
+                            <p>Mon-Thu: 11:00 AM - 10:00 PM</p>
+                            <p>Fri-Sun: 11:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59766.33701248331!2d79.03594622217548!3d21.146169232152782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1687842475584!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h3>Stay Connected</h3>
+                    <p>Subscribe to our newsletter for special deals and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn primary-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="SliceMaster Pizza Logo">
+                    <h2>Slice<span>Master</span></h2>
+                    <p>Handcrafted Artisan Pizzas</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#specials">Specials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Franchising</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="app-download">
+                        <p>Get Our App</p>
+                        <div class="app-buttons">
+                            <a href="#"><img src="images/app-store.png" alt="App Store"></a>
+                            <a href="#"><img src="images/google-play.png" alt="Google Play"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+    <p>&copy; 2025 SliceMaster Pizzeria. All Rights Reserved.</p>
+    <p>Designed by <a href="#">Anish-07</a> | Last Updated: 2025-06-16</p>
+</div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
