@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SliceMaster Pizzeria - Handcrafted Artisan Pizzas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +35,30 @@
                     <li><a href="#specials" class="nav-link">Specials</a></li>
                     <li><a href="#testimonials" class="nav-link">Reviews</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#" class="nav-button">Order Now</a></li>
                 </ul>
+                
+                <!-- Cart Icon -->
+                <button class="cart-icon-btn" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                
+                <!-- Auth Section (shown when logged out) -->
+                <div class="auth-buttons" id="authButtons">
+                    <a href="#" class="nav-button" id="loginBtn">Sign In</a>
+                </div>
+                
+                <!-- User Menu (shown when logged in) -->
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <i class="fas fa-user-circle" style="font-size: 2.4rem; color: #e63946;"></i>
+                    <span class="user-name" id="userName">User</span>
+                    <i class="fas fa-chevron-down" style="font-size: 1rem;"></i>
+                    <div class="user-dropdown">
+                        <a href="#" id="myOrdersBtn"><i class="fas fa-box"></i> My Orders</a>
+                        <a href="#" id="profileBtn"><i class="fas fa-user"></i> Profile</a>
+                        <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -104,14 +127,18 @@
                 <div class="separator"></div>
             </div>
 
-            <div class="menu-categories">
-                <button class="menu-category active" data-category="popular">Popular</button>
+            <div class="menu-categories" id="menuCategories">
+                <button class="menu-category active" data-category="all">All</button>
+                <button class="menu-category" data-category="popular">Popular</button>
                 <button class="menu-category" data-category="classic">Classics</button>
                 <button class="menu-category" data-category="specialty">Specialty</button>
                 <button class="menu-category" data-category="veg">Vegetarian</button>
             </div>
 
-            <div class="menu-grid">
+            <div class="menu-grid" id="menuGrid">
+                <!-- Pizzas will be loaded dynamically from the API -->
+                <!-- Fallback static content will show if API fails -->
+                
                 <!-- Pizza Item 1 -->
                 <div class="menu-item" data-category="popular specialty">
                     <div class="menu-item-img">
@@ -560,6 +587,154 @@
         <i class="fas fa-chevron-up"></i>
     </a>
 
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <button class="auth-close" id="authClose">&times;</button>
+            <div class="auth-form-container" id="authFormContainer">
+                <!-- Login Form (default) -->
+                <div id="loginForm">
+                    <h2>Welcome Back!</h2>
+                    <p class="auth-subtitle">Sign in to your account</p>
+                    <div class="form-error" id="loginError"></div>
+                    <form class="auth-form" id="loginFormElement">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="auth-btn primary-btn">Sign In</button>
+                    </form>
+                    <div class="auth-divider"><span>OR</span></div>
+                    <p class="auth-switch">Don't have an account? <a href="#" id="showRegister">Sign Up</a></p>
+                </div>
+                
+                <!-- Register Form -->
+                <div id="registerForm" style="display: none;">
+                    <h2>Create Account</h2>
+                    <p class="auth-subtitle">Join SliceMaster today</p>
+                    <div class="form-error" id="registerError"></div>
+                    <form class="auth-form" id="registerFormElement">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="regFirstName">First Name</label>
+                                <input type="text" id="regFirstName" required placeholder="First name">
+                            </div>
+                            <div class="form-group">
+                                <label for="regLastName">Last Name</label>
+                                <input type="text" id="regLastName" required placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email Address</label>
+                            <input type="email" id="regEmail" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="regPhone">Phone Number</label>
+                            <input type="tel" id="regPhone" required placeholder="Enter your phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Password</label>
+                            <input type="password" id="regPassword" required placeholder="Create password (min 6 chars)">
+                        </div>
+                        <button type="submit" class="auth-btn primary-btn">Create Account</button>
+                    </form>
+                    <div class="auth-divider"><span>OR</span></div>
+                    <p class="auth-switch">Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be rendered here -->
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-summary">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">₹0</span>
+                </div>
+                <div class="cart-delivery">
+                    <span>Delivery</span>
+                    <span id="cartDelivery">₹40</span>
+                </div>
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                <i class="fas fa-lock"></i> Proceed to Checkout
+            </button>
+        </div>
+    </div>
+    
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <h2>Checkout</h2>
+                <button class="checkout-close" id="checkoutClose">&times;</button>
+            </div>
+            <div class="checkout-progress">
+                <div class="progress-step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Address</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Payment</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Confirm</span>
+                </div>
+            </div>
+            <div class="checkout-content" id="checkoutContent">
+                <!-- Checkout steps will be rendered here -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Order Modal -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-modal-content">
+            <div class="order-modal-header">
+                <h2 id="orderModalTitle">My Orders</h2>
+                <button class="checkout-close" id="orderModalClose">&times;</button>
+            </div>
+            <div class="order-modal-body" id="orderModalBody">
+                <!-- Orders will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/websocket.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/app.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
