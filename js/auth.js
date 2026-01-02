@@ -6,48 +6,14 @@ const AuthModule = {
     modal: null,
     
     init() {
-        this.createModal();
+        this.modal = document.getElementById('authModal');
+        if (!this.modal) {
+            console.error('Auth modal not found in DOM');
+            return;
+        }
         this.bindEvents();
         this.checkAuthState();
-    },
-    
-    createModal() {
-        // Create auth modal HTML
-        const modalHTML = `
-            <div id="authModal" class="auth-modal">
-                <div class="auth-modal-content">
-                    <button class="auth-close" onclick="AuthModule.closeModal()">&times;</button>
-                    
-                    <!-- Login Form -->
-                    <div id="loginFormContainer" class="auth-form-container">
-                        <h2>Welcome Back!</h2>
-                        <p class="auth-subtitle">Sign in to continue ordering</p>
-                        
-                        <form id="loginForm" class="auth-form" onsubmit="AuthModule.handleLogin(event)">
-                            <div class="form-group">
-                                <label for="loginEmail">Email</label>
-                                <input type="email" id="loginEmail" placeholder="your@email.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="loginPassword">Password</label>
-                                <input type="password" id="loginPassword" placeholder="••••••••" required>
-                            </div>
-                            <div class="form-error" id="loginError"></div>
-                            <button type="submit" class="auth-btn primary-btn" id="loginBtn">
-                                <span>Sign In</span>
-                                <i class="fas fa-spinner fa-spin" style="display:none;"></i>
-                            </button>
-                        </form>
-                        
-                        <div class="auth-divider">
-                            <span>or</span>
-                        </div>
-                        
-                        <p class="auth-switch">
-                            Don't have an account? 
-                            <a href="#" onclick="AuthModule.showRegister(); return false;">Create one</a>
-                        </p>
-                    </div>
+    }
                     
                     <!-- Register Form -->
                     <div id="registerFormContainer" class="auth-form-container" style="display:none;">
@@ -90,18 +56,61 @@ const AuthModule = {
                         
                         <p class="auth-switch">
                             Already have an account? 
-                            <a href="#" onclick="AuthModule.showLogin(); return false;">Sign in</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        document.body.insertAdjacentHTML('beforeend', modalHTML);
-        this.modal = document.getElementById('authModal');
-    },
     
     bindEvents() {
+        // Bind login button in navbar
+        const loginBtn = document.getElementById('loginBtn');
+        if (loginBtn) {
+            loginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.openModal(false);
+            });
+        }
+        
+        // Bind register/signup links
+        const showRegisterLinks = document.querySelectorAll('#showRegister');
+        showRegisterLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.showRegister();
+            });
+        });
+        
+        // Bind login links
+        const showLoginLinks = document.querySelectorAll('#showLogin');
+        showLoginLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.showLogin();
+            });
+        });
+        
+        // Bind close button
+        const closeBtn = document.getElementById('authClose');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => this.closeModal());
+        }
+        
+        // Bind logout button
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.logout();
+            });
+        }
+        
+        // Bind form submissions
+        const loginForm = document.getElementById('loginFormElement');
+        if (loginForm) {
+            loginForm.addEventListener('submit', (e) => this.handleLogin(e));
+        }
+        
+        const registerForm = document.getElementById('registerFormElement');
+        if (registerForm) {
+            registerForm.addEventListener('submit', (e) => this.handleRegister(e));
+        }
+        
         // Close modal on outside click
         this.modal.addEventListener('click', (e) => {
             if (e.target === this.modal) {
@@ -109,16 +118,16 @@ const AuthModule = {
             }
         });
         
-        // Listen for logout events
-        window.addEventListener('auth:logout', () => {
-            this.updateUIForLogout();
-        });
-        
         // Close on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.modal.classList.contains('active')) {
                 this.closeModal();
             }
+        });
+        
+        // Listen for logout events
+        window.addEventListener('auth:logout', () => {
+            this.updateUIForLogout();
         });
     },
     
@@ -148,20 +157,26 @@ const AuthModule = {
     },
     
     showLogin() {
-        document.getElementById('loginFormContainer').style.display = 'block';
-        document.getElementById('registerFormContainer').style.display = 'none';
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        if (loginForm) loginForm.style.display = 'block';
+        if (registerForm) registerForm.style.display = 'none';
         this.clearErrors();
     },
     
     showRegister() {
-        document.getElementById('loginFormContainer').style.display = 'none';
-        document.getElementById('registerFormContainer').style.display = 'block';
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        if (loginForm) loginForm.style.display = 'none';
+        if (registerForm) registerForm.style.display = 'block';
         this.clearErrors();
     },
     
     clearForms() {
-        document.getElementById('loginForm').reset();
-        document.getElementById('registerForm').reset();
+        const loginForm = document.getElementById('loginFormElement');
+        const registerForm = document.getElementById('registerFormElement');
+        if (loginForm) loginForm.reset();
+        if (registerForm) registerForm.reset();
         this.clearErrors();
     },
     
