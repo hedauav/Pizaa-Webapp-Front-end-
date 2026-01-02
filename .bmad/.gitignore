@@ -1,0 +1,6 @@
+# .bmad/
+*.bmad-temp
+.bmad/.cache/
+
+# Note: Keep all BMAD documentation and tracking files in version control
+# Only temporary/cache files should be ignored

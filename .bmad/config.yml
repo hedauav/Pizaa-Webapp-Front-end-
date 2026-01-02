@@ -1,0 +1,132 @@
+# BMAD Configuration File
+# Breakthrough Method for Agile AI-Driven Development
+
+project:
+  name: "SliceMaster Pizza Webapp"
+  type: "fullstack-web-application"
+  description: "Pizza ordering and management web application with frontend and backend"
+  
+  stack:
+    frontend:
+      - HTML5
+      - CSS3
+      - JavaScript
+      - Responsive Design
+    backend:
+      - Java Spring Boot
+      - Spring Security
+      - Spring Data JPA
+      - MySQL
+      - WebSocket
+    deployment:
+      - Maven
+      
+  repositories:
+    - name: "Pizaa-Webapp-Front-end-"
+      path: "./Pizaa-Webapp-Front-end-"
+      type: "frontend"
+    - name: "SliceMaster-Backend"
+      path: "./SliceMaster-Backend"
+      type: "backend"
+
+bmad:
+  version: "1.0.0"
+  enabled_phases:
+    - analysis
+    - planning
+    - solutioning
+    - implementation
+    
+  workflows:
+    planning_track: "bmad-method"  # Options: quick-flow, bmad-method, enterprise
+    
+  agents:
+    analyst:
+      enabled: true
+      scope: "brainstorming, research, product-brief"
+    
+    pm:
+      enabled: true
+      scope: "prd, tech-spec, epics, stories"
+    
+    ux:
+      enabled: true
+      scope: "ux-design, wireframes, user-flows"
+    
+    architect:
+      enabled: true
+      scope: "architecture, technical-design, database-schema"
+    
+    scrum_master:
+      enabled: true
+      scope: "sprint-planning, story-management"
+    
+    developer:
+      enabled: true
+      scope: "implementation, tdd, code-review"
+
+# Phase-specific configurations
+phases:
+  analysis:
+    enabled: true
+    outputs_directory: ".bmad/analysis"
+    
+  planning:
+    enabled: true
+    outputs_directory: ".bmad/planning"
+    required_docs:
+      - PRD
+      - Tech-Spec
+    
+  solutioning:
+    enabled: true
+    outputs_directory: ".bmad/solutioning"
+    required_docs:
+      - Architecture
+      - Epics
+      - Stories
+    
+  implementation:
+    enabled: true
+    outputs_directory: ".bmad/implementation"
+    sprint_tracking: true
+    tdd_required: true
+    code_review_required: true
+
+# Development guidelines
+guidelines:
+  code_standards:
+    - "Follow industry best practices"
+    - "Write clean, maintainable code"
+    - "Include comprehensive documentation"
+    - "Implement proper error handling"
+    
+  testing:
+    - "Write unit tests for all business logic"
+    - "Implement integration tests for APIs"
+    - "Achieve minimum 80% code coverage"
+    
+  security:
+    - "Follow OWASP security guidelines"
+    - "Implement proper authentication and authorization"
+    - "Sanitize all user inputs"
+    - "Use HTTPS for all communications"
+
+# Story tracking
+story_management:
+  template: "user-story"
+  statuses:
+    - "backlog"
+    - "ready"
+    - "in-progress"
+    - "code-review"
+    - "testing"
+    - "done"
+  
+  estimation: "story-points"  # Options: story-points, hours, t-shirt-sizes
+  
+# Sprint configuration
+sprints:
+  duration_days: 14
+  velocity_tracking: true
+  retrospectives: true
