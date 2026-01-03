@@ -198,7 +198,7 @@ const AuthModule = {
             firstName: document.getElementById('regFirstName').value,
             lastName: document.getElementById('regLastName').value,
             email: document.getElementById('regEmail').value,
-            phone: document.getElementById('regPhone').value,
+            phoneNumber: document.getElementById('regPhone').value,
             password: document.getElementById('regPassword').value
         };
         
