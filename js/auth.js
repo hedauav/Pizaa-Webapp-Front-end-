@@ -151,17 +151,17 @@ const AuthModule = {
     
     setLoading(btnId, loading) {
         const btn = document.getElementById(btnId);
-        const span = btn.querySelector('span');
-        const icon = btn.querySelector('i');
+        if (!btn) return;
         
         if (loading) {
             btn.disabled = true;
-            span.style.display = 'none';
-            icon.style.display = 'inline-block';
+            btn.dataset.originalText = btn.textContent;
+            btn.textContent = 'Please wait...';
         } else {
             btn.disabled = false;
-            span.style.display = 'inline';
-            icon.style.display = 'none';
+            if (btn.dataset.originalText) {
+                btn.textContent = btn.dataset.originalText;
+            }
         }
     },
     
@@ -171,23 +171,23 @@ const AuthModule = {
         const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
         
-        this.setLoading('loginBtn', true);
+        this.setLoading('loginSubmitBtn', true);
         this.clearErrors();
-        
+
         try {
             const response = await AuthAPI.login(email, password);
             this.updateUIForLogin(response.user || response);
             this.closeModal();
-            
+
             // Trigger cart sync after login
             window.dispatchEvent(new CustomEvent('auth:login'));
-            
+
             Toast.show('Welcome back! 🍕', 'success');
         } catch (error) {
             const message = ERROR_MESSAGES[error.message] || error.message || 'Login failed';
             this.showError('loginError', message);
         } finally {
-            this.setLoading('loginBtn', false);
+            this.setLoading('loginSubmitBtn', false);
         }
     },
     
@@ -202,23 +202,23 @@ const AuthModule = {
             password: document.getElementById('regPassword').value
         };
         
-        this.setLoading('registerBtn', true);
+        this.setLoading('registerSubmitBtn', true);
         this.clearErrors();
-        
+
         try {
             const response = await AuthAPI.register(userData);
             this.updateUIForLogin(response.user || response);
             this.closeModal();
-            
+
             // Trigger cart sync after registration
             window.dispatchEvent(new CustomEvent('auth:login'));
-            
+
             Toast.show('Account created! Welcome! 🎉', 'success');
         } catch (error) {
             const message = ERROR_MESSAGES[error.message] || error.message || 'Registration failed';
             this.showError('registerError', message);
         } finally {
-            this.setLoading('registerBtn', false);
+            this.setLoading('registerSubmitBtn', false);
         }
     },
     
