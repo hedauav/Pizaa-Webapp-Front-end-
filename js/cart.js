@@ -7,7 +7,10 @@ const CartModule = {
     isOpen: false,
     
     init() {
-        this.createCartSidebar();
+        // Only create cart sidebar if it doesn't already exist in HTML
+        if (!document.getElementById('cartSidebar')) {
+            this.createCartSidebar();
+        }
         this.loadCart();
         this.bindEvents();
         this.updateCartBadge();
@@ -80,6 +83,36 @@ const CartModule = {
         // Listen for auth events to sync cart
         window.addEventListener('auth:login', () => this.syncCartWithBackend());
         window.addEventListener('auth:logout', () => this.clearCart());
+        
+        // Bind cart button in navbar
+        const cartBtn = document.getElementById('cartBtn');
+        if (cartBtn) {
+            cartBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.toggle();
+            });
+        }
+        
+        // Bind cart close button
+        const cartClose = document.getElementById('cartClose');
+        if (cartClose) {
+            cartClose.addEventListener('click', () => this.close());
+        }
+        
+        // Bind cart overlay click to close
+        const cartOverlay = document.getElementById('cartOverlay');
+        if (cartOverlay) {
+            cartOverlay.addEventListener('click', () => this.close());
+        }
+        
+        // Bind checkout button
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        if (checkoutBtn) {
+            checkoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.proceedToCheckout();
+            });
+        }
         
         // Close on escape
         document.addEventListener('keydown', (e) => {

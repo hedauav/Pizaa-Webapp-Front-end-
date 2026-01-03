@@ -9,7 +9,10 @@ const CheckoutModule = {
     order: null,
     
     init() {
-        this.createCheckoutModal();
+        // Create checkout modal dynamically
+        if (!document.getElementById('checkoutModal')) {
+            this.createCheckoutModal();
+        }
     },
     
     createCheckoutModal() {

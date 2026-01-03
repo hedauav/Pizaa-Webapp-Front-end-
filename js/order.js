@@ -7,7 +7,40 @@ const OrderModule = {
     orders: [],
     
     init() {
-        this.createOrderModal();
+        // Only create modal if it doesn't exist in HTML
+        if (!document.getElementById('orderModal')) {
+            this.createOrderModal();
+        }
+        
+        // Bind My Orders button click event
+        this.bindEvents();
+    },
+    
+    bindEvents() {
+        // Bind My Orders button
+        const myOrdersBtn = document.getElementById('myOrdersBtn');
+        if (myOrdersBtn) {
+            myOrdersBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.showOrderHistory();
+            });
+        }
+        
+        // Bind close button
+        const orderModalClose = document.getElementById('orderModalClose');
+        if (orderModalClose) {
+            orderModalClose.addEventListener('click', () => this.closeModal());
+        }
+        
+        // Close on outside click
+        const orderModal = document.getElementById('orderModal');
+        if (orderModal) {
+            orderModal.addEventListener('click', (e) => {
+                if (e.target === orderModal) {
+                    this.closeModal();
+                }
+            });
+        }
     },
     
     createOrderModal() {
