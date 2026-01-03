@@ -228,36 +228,39 @@ const AuthModule = {
     },
     
     updateUIForLogin(user) {
-        const authBtn = document.querySelector('.nav-button');
-        if (authBtn) {
-            authBtn.innerHTML = `
-                <div class="user-menu">
-                    <span class="user-name">${user.firstName || 'User'}</span>
-                    <i class="fas fa-chevron-down"></i>
-                    <div class="user-dropdown">
-                        <a href="#" onclick="AuthModule.showProfile(); return false;">
-                            <i class="fas fa-user"></i> My Profile
-                        </a>
-                        <a href="#" onclick="OrderModule.showOrderHistory(); return false;">
-                            <i class="fas fa-receipt"></i> My Orders
-                        </a>
-                        <a href="#" onclick="AuthModule.logout(); return false;">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </a>
-                    </div>
-                </div>
-            `;
-            authBtn.classList.add('logged-in');
-            authBtn.onclick = null;
+        // Hide auth buttons (Sign In)
+        const authButtons = document.getElementById('authButtons');
+        if (authButtons) {
+            authButtons.style.display = 'none';
         }
+        
+        // Show user menu
+        const userMenu = document.getElementById('userMenu');
+        if (userMenu) {
+            userMenu.style.display = 'flex';
+        }
+        
+        // Update user name
+        const userName = document.getElementById('userName');
+        if (userName) {
+            userName.textContent = user.firstName || 'User';
+        }
+        
+        // Close the auth modal
+        this.closeModal();
     },
     
     updateUIForLogout() {
-        const authBtn = document.querySelector('.nav-button');
-        if (authBtn) {
-            authBtn.innerHTML = 'Login';
-            authBtn.classList.remove('logged-in');
-            authBtn.onclick = () => AuthModule.openModal();
+        // Show auth buttons (Sign In)
+        const authButtons = document.getElementById('authButtons');
+        if (authButtons) {
+            authButtons.style.display = 'flex';
+        }
+        
+        // Hide user menu
+        const userMenu = document.getElementById('userMenu');
+        if (userMenu) {
+            userMenu.style.display = 'none';
         }
     },
     
