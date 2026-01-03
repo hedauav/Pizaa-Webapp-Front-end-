@@ -3,8 +3,8 @@
 // ============================================
 
 const API_CONFIG = {
-    BASE_URL: 'http://localhost:8080/api/v1',
-    WS_URL: 'ws://localhost:8080/ws',
+    BASE_URL: 'http://localhost:8081/api/v1',
+    WS_URL: 'ws://localhost:8081/ws',
     
     // Token management
     getToken: () => localStorage.getItem('jwt_token'),

@@ -13,49 +13,7 @@ const AuthModule = {
         }
         this.bindEvents();
         this.checkAuthState();
-    }
-                    
-                    <!-- Register Form -->
-                    <div id="registerFormContainer" class="auth-form-container" style="display:none;">
-                        <h2>Create Account</h2>
-                        <p class="auth-subtitle">Join us for delicious pizzas!</p>
-                        
-                        <form id="registerForm" class="auth-form" onsubmit="AuthModule.handleRegister(event)">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="regFirstName">First Name</label>
-                                    <input type="text" id="regFirstName" placeholder="John" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="regLastName">Last Name</label>
-                                    <input type="text" id="regLastName" placeholder="Doe" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="regEmail">Email</label>
-                                <input type="email" id="regEmail" placeholder="your@email.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="regPhone">Phone Number</label>
-                                <input type="tel" id="regPhone" placeholder="+91 98765 43210" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="regPassword">Password</label>
-                                <input type="password" id="regPassword" placeholder="Min 8 characters" required minlength="8">
-                            </div>
-                            <div class="form-error" id="registerError"></div>
-                            <button type="submit" class="auth-btn primary-btn" id="registerBtn">
-                                <span>Create Account</span>
-                                <i class="fas fa-spinner fa-spin" style="display:none;"></i>
-                            </button>
-                        </form>
-                        
-                        <div class="auth-divider">
-                            <span>or</span>
-                        </div>
-                        
-                        <p class="auth-switch">
-                            Already have an account? 
+    },
     
     bindEvents() {
         // Bind login button in navbar
