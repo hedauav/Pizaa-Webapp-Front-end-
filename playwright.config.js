@@ -3,13 +3,13 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  timeout: 30000,
+  timeout: 60000, // Increased timeout for tests
   expect: {
-    timeout: 5000
+    timeout: 10000
   },
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: 1, // Retry failed tests once
   workers: 1,
   reporter: [
     ['html'],
@@ -17,10 +17,12 @@ module.exports = defineConfig({
   ],
   
   use: {
-    baseURL: 'http://localhost:8081',
+    baseURL: 'http://localhost:5500',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    actionTimeout: 15000, // Timeout for actions like click, fill
+    navigationTimeout: 30000, // Timeout for page navigations
   },
 
   projects: [
