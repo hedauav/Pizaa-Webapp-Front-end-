@@ -96,36 +96,36 @@ const CheckoutModule = {
                             <h3>Payment Method</h3>
                             
                             <div class="payment-methods">
-                                <label class="payment-option active" data-method="paypal">
-                                    <input type="radio" name="payment" value="paypal" checked>
-                                    <div class="payment-icon">
-                                        <i class="fab fa-paypal"></i>
-                                    </div>
-                                    <div class="payment-info">
-                                        <span class="payment-name">PayPal</span>
-                                        <span class="payment-desc">Pay securely with PayPal</span>
-                                    </div>
-                                </label>
-                                
-                                <label class="payment-option" data-method="crypto">
-                                    <input type="radio" name="payment" value="crypto">
-                                    <div class="payment-icon">
-                                        <i class="fab fa-ethereum"></i>
-                                    </div>
-                                    <div class="payment-info">
-                                        <span class="payment-name">Crypto (MATIC/USDT)</span>
-                                        <span class="payment-desc">Pay with cryptocurrency</span>
-                                    </div>
-                                </label>
-                                
-                                <label class="payment-option" data-method="cod">
-                                    <input type="radio" name="payment" value="cod">
+                                <label class="payment-option active" data-method="cod">
+                                    <input type="radio" name="payment" value="cod" checked>
                                     <div class="payment-icon">
                                         <i class="fas fa-money-bill-wave"></i>
                                     </div>
                                     <div class="payment-info">
                                         <span class="payment-name">Cash on Delivery</span>
                                         <span class="payment-desc">Pay when you receive</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-option" data-method="card">
+                                    <input type="radio" name="payment" value="card">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Credit/Debit Card</span>
+                                        <span class="payment-desc">Pay with card</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-option" data-method="upi">
+                                    <input type="radio" name="payment" value="upi">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">UPI Payment</span>
+                                        <span class="payment-desc">Pay with UPI</span>
                                     </div>
                                 </label>
                             </div>
@@ -416,15 +416,8 @@ const CheckoutModule = {
             const response = await OrderAPI.createOrder(orderData);
             this.order = response;
             
-            // Handle payment
-            if (this.selectedPayment === 'paypal') {
-                await this.handlePayPalPayment(response.id);
-            } else if (this.selectedPayment === 'crypto') {
-                await this.handleCryptoPayment(response.id);
-            } else {
-                // COD - order is already placed
-                this.showSuccess(response.id || response.orderNumber);
-            }
+            // For COD and other payments, order is already placed
+            this.showSuccess(response.id || response.orderNumber);
             
             // Clear cart after successful order
             CartModule.clearCart();
