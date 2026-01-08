@@ -69,239 +69,329 @@
       - button "Classics" [ref=e68] [cursor=pointer]
       - button "Specialty" [ref=e69] [cursor=pointer]
       - button "Vegetarian" [ref=e70] [cursor=pointer]
-    - generic [ref=e72]:
-      - generic [ref=e73]: 
-      - paragraph [ref=e74]: Failed to load menu
-      - button " Try Again" [ref=e75] [cursor=pointer]:
-        - generic [ref=e76]: 
-        - text: Try Again
-  - generic [ref=e78]:
-    - generic [ref=e79]:
-      - heading "Our Story" [level=2] [ref=e80]
-      - paragraph [ref=e81]: The passion behind our pizzas
-    - generic [ref=e83]:
-      - generic [ref=e84]:
-        - img "Chef Making Pizza" [ref=e85]
-        - generic [ref=e86]:
-          - generic [ref=e87]: 25+
-          - text: years of experience
-      - generic [ref=e88]:
-        - heading "Traditional Pizza Making Since 2000" [level=3] [ref=e89]
-        - paragraph [ref=e90]: SliceMaster Pizzeria was born from a passion for authentic Italian cuisine and a desire to bring the genuine taste of Naples to your neighborhood. Our founder, Chef Antonio, learned the art of pizza making from his grandfather in southern Italy before bringing his family recipes to the United States.
-        - paragraph [ref=e91]: What started as a small family-owned pizza shop has grown into a beloved local institution, but our commitment to quality has never wavered. We still make our dough fresh daily, source local ingredients whenever possible, and cook in traditional brick ovens.
-        - generic [ref=e92]:
-          - generic [ref=e93]:
-            - generic [ref=e94]: 
-            - generic [ref=e95]: Hand-kneaded dough
-          - generic [ref=e96]:
-            - generic [ref=e97]: 
-            - generic [ref=e98]: Locally sourced ingredients
-          - generic [ref=e99]:
-            - generic [ref=e100]: 
-            - generic [ref=e101]: Traditional recipes
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - img "Pepperoni Supreme" [ref=e74]
+          - generic [ref=e75]: Bestseller
+        - generic [ref=e76]:
+          - heading "Pepperoni Supreme" [level=3] [ref=e77]
+          - paragraph [ref=e78]: Premium pepperoni, mozzarella, fresh basil, and our signature tomato sauce
+          - generic [ref=e79]:
+            - generic [ref=e80]: ₹199
+            - button "+ Add" [ref=e81] [cursor=pointer]:
+              - generic [ref=e82]: +
+              - text: Add
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - img "Classic Margherita" [ref=e85]
+          - generic [ref=e87]: 
+        - generic [ref=e88]:
+          - heading "Classic Margherita" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Fresh buffalo mozzarella, tomatoes, basil leaves, olive oil, and sea salt
+          - generic [ref=e91]:
+            - generic [ref=e92]: ₹149
+            - button "+ Add" [ref=e93] [cursor=pointer]:
+              - generic [ref=e94]: +
+              - text: Add
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - img "BBQ Chicken Deluxe" [ref=e97]
+          - generic [ref=e98]: New
+        - generic [ref=e99]:
+          - heading "BBQ Chicken Deluxe" [level=3] [ref=e100]
+          - paragraph [ref=e101]: Grilled chicken, red onions, bacon, and tangy BBQ sauce with mozzarella
           - generic [ref=e102]:
-            - generic [ref=e103]: 
-            - generic [ref=e104]: Brick oven baked
-        - link "Visit Us" [ref=e105] [cursor=pointer]:
-          - /url: "#contact"
-  - generic [ref=e107]:
-    - generic [ref=e108]:
-      - heading "Special Deals" [level=2] [ref=e109]
-      - paragraph [ref=e110]: Exclusive offers you can't resist
-    - generic [ref=e112]:
-      - generic [ref=e113]:
-        - img "Family Combo Deal" [ref=e115]
-        - generic [ref=e116]:
-          - heading "Family Combo" [level=3] [ref=e117]
-          - paragraph [ref=e118]: 2 large pizzas, garlic bread, and a 2L soda
-          - generic [ref=e119]: ₹399 ₹299
-          - link "Order Now" [ref=e120] [cursor=pointer]:
-            - /url: "#"
-      - generic [ref=e121]:
-        - generic [ref=e122]: Best Value
-        - img "Weekend Special" [ref=e124]
-        - generic [ref=e125]:
-          - heading "Weekend Special" [level=3] [ref=e126]
-          - paragraph [ref=e127]: Buy any large specialty pizza and get a medium classic pizza free
-          - generic [ref=e128]: From ₹199
-          - link "Order Now" [ref=e129] [cursor=pointer]:
-            - /url: "#"
-      - generic [ref=e130]:
-        - img "Lunch Deal" [ref=e132]
+            - generic [ref=e103]: ₹189
+            - button "+ Add" [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]: +
+              - text: Add
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - img "Veggie Supreme" [ref=e108]
+          - generic [ref=e109]: Bestseller
+          - generic [ref=e111]: 
+        - generic [ref=e112]:
+          - heading "Veggie Supreme" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Bell peppers, mushrooms, red onions, black olives, tomatoes, and spinach
+          - generic [ref=e115]:
+            - generic [ref=e116]: ₹179
+            - button "+ Add" [ref=e117] [cursor=pointer]:
+              - generic [ref=e118]: +
+              - text: Add
+      - generic [ref=e119]:
+        - img "Hawaiian Paradise" [ref=e121]
+        - generic [ref=e122]:
+          - heading "Hawaiian Paradise" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Ham, pineapple chunks, and mozzarella on our homemade tomato sauce
+          - generic [ref=e125]:
+            - generic [ref=e126]: ₹159
+            - button "+ Add" [ref=e127] [cursor=pointer]:
+              - generic [ref=e128]: +
+              - text: Add
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - img "Meat Lovers" [ref=e131]
+          - generic [ref=e132]: Bestseller
         - generic [ref=e133]:
-          - heading "Lunch Special" [level=3] [ref=e134]
-          - paragraph [ref=e135]: Personal pizza with one topping and a drink
-          - generic [ref=e136]: ₹129 ₹99
-          - link "Order Now" [ref=e137] [cursor=pointer]:
-            - /url: "#"
-  - generic [ref=e139]:
-    - generic [ref=e140]:
-      - heading "Customer Reviews" [level=2] [ref=e141]
-      - paragraph [ref=e142]: What our happy customers say
-    - generic [ref=e144]:
-      - generic [ref=e145]:
-        - generic [ref=e147]:
+          - heading "Meat Lovers" [level=3] [ref=e134]
+          - paragraph [ref=e135]: Pepperoni, Italian sausage, bacon, ham, and ground beef with extra cheese
+          - generic [ref=e136]:
+            - generic [ref=e137]: ₹229
+            - button "+ Add" [ref=e138] [cursor=pointer]:
+              - generic [ref=e139]: +
+              - text: Add
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - img "Mediterranean" [ref=e142]
+          - generic [ref=e144]: 
+        - generic [ref=e145]:
+          - heading "Mediterranean" [level=3] [ref=e146]
+          - paragraph [ref=e147]: Feta cheese, olives, sun-dried tomatoes, artichoke hearts, and spinach
           - generic [ref=e148]:
-            - generic [ref=e149]: 
-            - generic [ref=e150]: 
-            - generic [ref=e151]: 
-            - generic [ref=e152]: 
-            - generic [ref=e153]: 
-          - paragraph [ref=e154]: "\"The best pizza I've had in years! The crust is perfectly crisp yet chewy, and the toppings are always fresh. Their delivery is always on time too!\""
-          - generic [ref=e155]:
-            - img "Sarah Johnson" [ref=e156]
-            - generic [ref=e157]:
-              - heading "Sergio Ramos" [level=4] [ref=e158]
+            - generic [ref=e149]: ₹179
+            - button "+ Add" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]: +
+              - text: Add
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - img "Spicy Diavola" [ref=e154]
+          - generic [ref=e155]: New
+        - generic [ref=e156]:
+          - heading "Spicy Diavola" [level=3] [ref=e157]
+          - paragraph [ref=e158]: Spicy salami, fresh chilies, jalapenos, mozzarella, and hot pepper flakes
+          - generic [ref=e159]:
+            - generic [ref=e160]: ₹189
+            - button "+ Add" [ref=e161] [cursor=pointer]:
+              - generic [ref=e162]: +
+              - text: Add
+  - generic [ref=e164]:
+    - generic [ref=e165]:
+      - heading "Our Story" [level=2] [ref=e166]
+      - paragraph [ref=e167]: The passion behind our pizzas
+    - generic [ref=e169]:
+      - generic [ref=e170]:
+        - img "Chef Making Pizza" [ref=e171]
+        - generic [ref=e172]:
+          - generic [ref=e173]: 25+
+          - text: years of experience
+      - generic [ref=e174]:
+        - heading "Traditional Pizza Making Since 2000" [level=3] [ref=e175]
+        - paragraph [ref=e176]: SliceMaster Pizzeria was born from a passion for authentic Italian cuisine and a desire to bring the genuine taste of Naples to your neighborhood. Our founder, Chef Antonio, learned the art of pizza making from his grandfather in southern Italy before bringing his family recipes to the United States.
+        - paragraph [ref=e177]: What started as a small family-owned pizza shop has grown into a beloved local institution, but our commitment to quality has never wavered. We still make our dough fresh daily, source local ingredients whenever possible, and cook in traditional brick ovens.
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - generic [ref=e180]: 
+            - generic [ref=e181]: Hand-kneaded dough
+          - generic [ref=e182]:
+            - generic [ref=e183]: 
+            - generic [ref=e184]: Locally sourced ingredients
+          - generic [ref=e185]:
+            - generic [ref=e186]: 
+            - generic [ref=e187]: Traditional recipes
+          - generic [ref=e188]:
+            - generic [ref=e189]: 
+            - generic [ref=e190]: Brick oven baked
+        - link "Visit Us" [ref=e191] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e193]:
+    - generic [ref=e194]:
+      - heading "Special Deals" [level=2] [ref=e195]
+      - paragraph [ref=e196]: Exclusive offers you can't resist
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - img "Family Combo Deal" [ref=e201]
+        - generic [ref=e202]:
+          - heading "Family Combo" [level=3] [ref=e203]
+          - paragraph [ref=e204]: 2 large pizzas, garlic bread, and a 2L soda
+          - generic [ref=e205]: ₹399 ₹299
+          - link "Order Now" [ref=e206] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=e207]:
+        - generic [ref=e208]: Best Value
+        - img "Weekend Special" [ref=e210]
+        - generic [ref=e211]:
+          - heading "Weekend Special" [level=3] [ref=e212]
+          - paragraph [ref=e213]: Buy any large specialty pizza and get a medium classic pizza free
+          - generic [ref=e214]: From ₹199
+          - link "Order Now" [ref=e215] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=e216]:
+        - img "Lunch Deal" [ref=e218]
+        - generic [ref=e219]:
+          - heading "Lunch Special" [level=3] [ref=e220]
+          - paragraph [ref=e221]: Personal pizza with one topping and a drink
+          - generic [ref=e222]: ₹129 ₹99
+          - link "Order Now" [ref=e223] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=e225]:
+    - generic [ref=e226]:
+      - heading "Customer Reviews" [level=2] [ref=e227]
+      - paragraph [ref=e228]: What our happy customers say
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - generic [ref=e233]:
+          - generic [ref=e234]:
+            - generic [ref=e235]: 
+            - generic [ref=e236]: 
+            - generic [ref=e237]: 
+            - generic [ref=e238]: 
+            - generic [ref=e239]: 
+          - paragraph [ref=e240]: "\"The best pizza I've had in years! The crust is perfectly crisp yet chewy, and the toppings are always fresh. Their delivery is always on time too!\""
+          - generic [ref=e241]:
+            - img "Sarah Johnson" [ref=e242]
+            - generic [ref=e243]:
+              - heading "Sergio Ramos" [level=4] [ref=e244]
               - text: Regular Customer
-        - generic [ref=e160]:
-          - generic [ref=e161]:
-            - generic [ref=e162]: 
-            - generic [ref=e163]: 
-            - generic [ref=e164]: 
-            - generic [ref=e165]: 
-            - generic [ref=e166]: 
-          - paragraph [ref=e167]: "\"As an Italian, I'm very picky about my pizza. SliceMaster is the real deal! Their Margherita pizza reminds me of home. Authentic flavors and great service.\""
-          - generic [ref=e168]:
-            - img "Marco Rossi" [ref=e169]
-            - generic [ref=e170]:
-              - heading "Marco Rossi" [level=4] [ref=e171]
+        - generic [ref=e246]:
+          - generic [ref=e247]:
+            - generic [ref=e248]: 
+            - generic [ref=e249]: 
+            - generic [ref=e250]: 
+            - generic [ref=e251]: 
+            - generic [ref=e252]: 
+          - paragraph [ref=e253]: "\"As an Italian, I'm very picky about my pizza. SliceMaster is the real deal! Their Margherita pizza reminds me of home. Authentic flavors and great service.\""
+          - generic [ref=e254]:
+            - img "Marco Rossi" [ref=e255]
+            - generic [ref=e256]:
+              - heading "Marco Rossi" [level=4] [ref=e257]
               - text: Foodie
-        - generic [ref=e173]:
-          - generic [ref=e174]:
-            - generic [ref=e175]: 
-            - generic [ref=e176]: 
-            - generic [ref=e177]: 
-            - generic [ref=e178]: 
-            - generic [ref=e179]: 
-          - paragraph [ref=e180]: "\"My family loves their weekend special deal. The kids are always excited when it's SliceMaster night! Great value and even better taste. Highly recommended.\""
-          - generic [ref=e181]:
-            - img "Jennifer Smith" [ref=e182]
-            - generic [ref=e183]:
-              - heading "Jennifer Smith" [level=4] [ref=e184]
+        - generic [ref=e259]:
+          - generic [ref=e260]:
+            - generic [ref=e261]: 
+            - generic [ref=e262]: 
+            - generic [ref=e263]: 
+            - generic [ref=e264]: 
+            - generic [ref=e265]: 
+          - paragraph [ref=e266]: "\"My family loves their weekend special deal. The kids are always excited when it's SliceMaster night! Great value and even better taste. Highly recommended.\""
+          - generic [ref=e267]:
+            - img "Jennifer Smith" [ref=e268]
+            - generic [ref=e269]:
+              - heading "Jennifer Smith" [level=4] [ref=e270]
               - text: Family Customer
-      - generic [ref=e185]:
-        - button "Previous testimonial" [ref=e186] [cursor=pointer]:
-          - generic [ref=e187]: 
-        - button "Next testimonial" [ref=e192] [cursor=pointer]:
-          - generic [ref=e193]: 
-  - generic [ref=e195]:
-    - img "Pizza Making" [ref=e197]
-    - img "Brick Oven" [ref=e199]
-    - img "Fresh Ingredients" [ref=e201]
-    - img "Restaurant Interior" [ref=e203]
-    - img "Happy Customers" [ref=e205]
-  - generic [ref=e207]:
-    - generic [ref=e208]:
-      - heading "Visit Us" [level=2] [ref=e209]
-      - paragraph [ref=e210]: Find us or contact us
-    - generic [ref=e212]:
-      - generic [ref=e213]:
-        - generic [ref=e214]:
-          - generic [ref=e216]: 
-          - generic [ref=e217]:
-            - heading "Our Location" [level=4] [ref=e218]
-            - paragraph [ref=e219]: 123 Pizza Street, Gittikhadan
-            - paragraph [ref=e220]: Nagput, 440013
-        - generic [ref=e221]:
-          - generic [ref=e223]: 
-          - generic [ref=e224]:
-            - heading "Call Us" [level=4] [ref=e225]
-            - paragraph [ref=e226]: "Order: (555) 123-4567"
-            - paragraph [ref=e227]: "Reservations: (555) 987-6543"
-        - generic [ref=e228]:
-          - generic [ref=e230]: 
-          - generic [ref=e231]:
-            - heading "Opening Hours" [level=4] [ref=e232]
-            - paragraph [ref=e233]: "Mon-Thu: 11:00 AM - 10:00 PM"
-            - paragraph [ref=e234]: "Fri-Sun: 11:00 AM - 11:00 PM"
-      - iframe [ref=e236]:
+      - generic [ref=e271]:
+        - button "Previous testimonial" [ref=e272] [cursor=pointer]:
+          - generic [ref=e273]: 
+        - button "Next testimonial" [ref=e278] [cursor=pointer]:
+          - generic [ref=e279]: 
+  - generic [ref=e281]:
+    - img "Pizza Making" [ref=e283]
+    - img "Brick Oven" [ref=e285]
+    - img "Fresh Ingredients" [ref=e287]
+    - img "Restaurant Interior" [ref=e289]
+    - img "Happy Customers" [ref=e291]
+  - generic [ref=e293]:
+    - generic [ref=e294]:
+      - heading "Visit Us" [level=2] [ref=e295]
+      - paragraph [ref=e296]: Find us or contact us
+    - generic [ref=e298]:
+      - generic [ref=e299]:
+        - generic [ref=e300]:
+          - generic [ref=e302]: 
+          - generic [ref=e303]:
+            - heading "Our Location" [level=4] [ref=e304]
+            - paragraph [ref=e305]: 123 Pizza Street, Gittikhadan
+            - paragraph [ref=e306]: Nagput, 440013
+        - generic [ref=e307]:
+          - generic [ref=e309]: 
+          - generic [ref=e310]:
+            - heading "Call Us" [level=4] [ref=e311]
+            - paragraph [ref=e312]: "Order: (555) 123-4567"
+            - paragraph [ref=e313]: "Reservations: (555) 987-6543"
+        - generic [ref=e314]:
+          - generic [ref=e316]: 
+          - generic [ref=e317]:
+            - heading "Opening Hours" [level=4] [ref=e318]
+            - paragraph [ref=e319]: "Mon-Thu: 11:00 AM - 10:00 PM"
+            - paragraph [ref=e320]: "Fri-Sun: 11:00 AM - 11:00 PM"
+      - iframe [ref=e322]:
         
-    - generic [ref=e238]:
-      - heading "Stay Connected" [level=3] [ref=e239]
-      - paragraph [ref=e240]: Subscribe to our newsletter for special deals and updates
-      - generic [ref=e241]:
-        - textbox "Your Email Address" [ref=e242]
-        - button "Subscribe" [ref=e243] [cursor=pointer]
-  - contentinfo [ref=e244]:
-    - generic [ref=e245]:
-      - generic [ref=e246]:
-        - generic [ref=e247]:
-          - img "SliceMaster Pizza Logo" [ref=e248]
-          - heading "SliceMaster" [level=2] [ref=e249]
-          - paragraph [ref=e250]: Handcrafted Artisan Pizzas
-        - generic [ref=e251]:
-          - heading "Quick Links" [level=4] [ref=e252]
-          - list [ref=e253]:
-            - listitem [ref=e254]:
-              - link "Home" [ref=e255] [cursor=pointer]:
+    - generic [ref=e324]:
+      - heading "Stay Connected" [level=3] [ref=e325]
+      - paragraph [ref=e326]: Subscribe to our newsletter for special deals and updates
+      - generic [ref=e327]:
+        - textbox "Your Email Address" [ref=e328]
+        - button "Subscribe" [ref=e329] [cursor=pointer]
+  - contentinfo [ref=e330]:
+    - generic [ref=e331]:
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - img "SliceMaster Pizza Logo" [ref=e334]
+          - heading "SliceMaster" [level=2] [ref=e335]
+          - paragraph [ref=e336]: Handcrafted Artisan Pizzas
+        - generic [ref=e337]:
+          - heading "Quick Links" [level=4] [ref=e338]
+          - list [ref=e339]:
+            - listitem [ref=e340]:
+              - link "Home" [ref=e341] [cursor=pointer]:
                 - /url: "#hero"
-            - listitem [ref=e256]:
-              - link "Menu" [ref=e257] [cursor=pointer]:
+            - listitem [ref=e342]:
+              - link "Menu" [ref=e343] [cursor=pointer]:
                 - /url: "#menu"
-            - listitem [ref=e258]:
-              - link "About Us" [ref=e259] [cursor=pointer]:
+            - listitem [ref=e344]:
+              - link "About Us" [ref=e345] [cursor=pointer]:
                 - /url: "#about"
-            - listitem [ref=e260]:
-              - link "Specials" [ref=e261] [cursor=pointer]:
+            - listitem [ref=e346]:
+              - link "Specials" [ref=e347] [cursor=pointer]:
                 - /url: "#specials"
-            - listitem [ref=e262]:
-              - link "Contact" [ref=e263] [cursor=pointer]:
+            - listitem [ref=e348]:
+              - link "Contact" [ref=e349] [cursor=pointer]:
                 - /url: "#contact"
-        - generic [ref=e264]:
-          - heading "Information" [level=4] [ref=e265]
-          - list [ref=e266]:
-            - listitem [ref=e267]:
-              - link "Careers" [ref=e268] [cursor=pointer]:
+        - generic [ref=e350]:
+          - heading "Information" [level=4] [ref=e351]
+          - list [ref=e352]:
+            - listitem [ref=e353]:
+              - link "Careers" [ref=e354] [cursor=pointer]:
                 - /url: "#"
-            - listitem [ref=e269]:
-              - link "Franchising" [ref=e270] [cursor=pointer]:
+            - listitem [ref=e355]:
+              - link "Franchising" [ref=e356] [cursor=pointer]:
                 - /url: "#"
-            - listitem [ref=e271]:
-              - link "Privacy Policy" [ref=e272] [cursor=pointer]:
+            - listitem [ref=e357]:
+              - link "Privacy Policy" [ref=e358] [cursor=pointer]:
                 - /url: "#"
-            - listitem [ref=e273]:
-              - link "Terms of Service" [ref=e274] [cursor=pointer]:
+            - listitem [ref=e359]:
+              - link "Terms of Service" [ref=e360] [cursor=pointer]:
                 - /url: "#"
-            - listitem [ref=e275]:
-              - link "FAQ" [ref=e276] [cursor=pointer]:
+            - listitem [ref=e361]:
+              - link "FAQ" [ref=e362] [cursor=pointer]:
                 - /url: "#"
-        - generic [ref=e277]:
-          - heading "Follow Us" [level=4] [ref=e278]
-          - generic [ref=e279]:
-            - link "Facebook" [ref=e280] [cursor=pointer]:
+        - generic [ref=e363]:
+          - heading "Follow Us" [level=4] [ref=e364]
+          - generic [ref=e365]:
+            - link "Facebook" [ref=e366] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e281]: 
-            - link "Instagram" [ref=e282] [cursor=pointer]:
+              - generic [ref=e367]: 
+            - link "Instagram" [ref=e368] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e283]: 
-            - link "Twitter" [ref=e284] [cursor=pointer]:
+              - generic [ref=e369]: 
+            - link "Twitter" [ref=e370] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e285]: 
-            - link "TikTok" [ref=e286] [cursor=pointer]:
+              - generic [ref=e371]: 
+            - link "TikTok" [ref=e372] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e287]: 
-          - generic [ref=e288]:
-            - paragraph [ref=e289]: Get Our App
-            - generic [ref=e290]:
-              - link "App Store" [ref=e291] [cursor=pointer]:
+              - generic [ref=e373]: 
+          - generic [ref=e374]:
+            - paragraph [ref=e375]: Get Our App
+            - generic [ref=e376]:
+              - link "App Store" [ref=e377] [cursor=pointer]:
                 - /url: "#"
-                - img "App Store" [ref=e292]
-              - link "Google Play" [ref=e293] [cursor=pointer]:
+                - img "App Store" [ref=e378]
+              - link "Google Play" [ref=e379] [cursor=pointer]:
                 - /url: "#"
-                - img "Google Play" [ref=e294]
-      - generic [ref=e295]:
-        - paragraph [ref=e296]: © 2025 SliceMaster Pizzeria. All Rights Reserved.
-        - paragraph [ref=e297]: "Designed by Anish-07 | Last Updated: 2026-01-06"
-  - generic [ref=e298]:
-    - generic [ref=e299]:
-      - heading " Your Cart" [level=3] [ref=e300]:
-        - generic [ref=e301]: 
+                - img "Google Play" [ref=e380]
+      - generic [ref=e381]:
+        - paragraph [ref=e382]: © 2025 SliceMaster Pizzeria. All Rights Reserved.
+        - paragraph [ref=e383]: "Designed by Anish-07 | Last Updated: 2026-01-08"
+  - generic [ref=e384]:
+    - generic [ref=e385]:
+      - heading " Your Cart" [level=3] [ref=e386]:
+        - generic [ref=e387]: 
         - text: Your Cart
-      - button "×" [ref=e302] [cursor=pointer]
-    - generic [ref=e304]:
-      - generic [ref=e305]: 
-      - paragraph [ref=e306]: Your cart is empty
-      - link "Browse Menu" [ref=e307] [cursor=pointer]:
+      - button "×" [ref=e388] [cursor=pointer]
+    - generic [ref=e390]:
+      - generic [ref=e391]: 
+      - paragraph [ref=e392]: Your cart is empty
+      - link "Browse Menu" [ref=e393] [cursor=pointer]:
         - /url: "#menu"
     - text: 
 ```
